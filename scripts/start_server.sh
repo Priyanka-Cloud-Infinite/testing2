@@ -16,6 +16,7 @@ do
 			npm i
 			npm run-script build
 			pm2 serve build $portno --spa
+			pm2 updatePM2
 			cd
 		elif [ $type == node ]
 		then
@@ -26,6 +27,7 @@ do
 			cd ${arr1[$i]}
 			npm i
 			pm2 start $filename
+			pm2 updatePM2
 			cd
 		elif [ $type == html ]
 		then
